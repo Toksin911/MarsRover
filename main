@@ -1,0 +1,23 @@
+# 104038058
+def mars_rover(robots, limit) -> int:
+    """Марсоход."""
+    robots.sort(reverse=True)
+    platforms: int = 0  # Число платформ.
+    position_max: int = 0  # Наибольшое число в моссиве.
+    position_min: int = len(robots) - 1  # Наименьшое число в моссиве.
+    while position_min >= position_max:
+        if (robots[position_min] + robots[position_max]) <= limit:
+            position_min -= 1
+        position_max += 1
+        platforms += 1
+    return platforms
+
+
+robots = [int(x) for x in input().split()]
+limit = int(input())
+print(mars_rover(robots, limit))
+
+if __name__ == '__main__':
+    robots = [int(x) for x in input().split()]
+    limit = int(input())
+    print(mars_rover(robots, limit))
