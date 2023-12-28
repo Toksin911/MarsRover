@@ -13,10 +13,6 @@ def mars_rover(robots, limit) -> int:
     return platforms
 
 
-robots = [int(x) for x in input().split()]
-limit = int(input())
-print(mars_rover(robots, limit))
-
 if __name__ == '__main__':
     robots = [int(x) for x in input().split()]
     limit = int(input())
