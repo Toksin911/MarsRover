@@ -17,3 +17,4 @@ if __name__ == '__main__':
     robots: list[int] = [int(array_count) for array_count in input().split()]
     limit = int(input())
     print(mars_rover(robots, limit))
+ 
